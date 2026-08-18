@@ -1,0 +1,976 @@
+/* =========================================================
+   SPACEHEY / WINDOWS 98
+   PASSWORD GENERATOR
+   ========================================================= */
+
+:root {
+
+    --verde-fundo: #08756f;
+    --verde-fundo-escuro: #05625e;
+
+    --cinza: #d4d0c8;
+    --cinza-claro: #eeeeee;
+    --cinza-escuro: #a9a49c;
+
+    --azul-barra: #4169a1;
+    --azul-escuro: #17375e;
+
+    --texto: #202020;
+    --link: #183c80;
+
+    --verde: #268b3d;
+    --amarelo: #c8bd28;
+    --vermelho: #b64242;
+
+    --borda-escura: #55514b;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 20px 10px;
+
+    color: var(--texto);
+
+    font-family:
+        Tahoma,
+        Verdana,
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    background-color: var(--verde-fundo);
+
+    /*
+       Textura sutil para lembrar os fundos antigos.
+    */
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.035) 0,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+}
+
+
+/* =========================================================
+   SITE
+   ========================================================= */
+
+.site {
+
+    width: min(1000px, 96%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.topo {
+
+    border: 1px solid #222;
+
+    background: var(--cinza);
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #666;
+}
+
+
+.topo-titulo {
+
+    padding: 5px 8px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #173b6a,
+            #6484ad
+        );
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.menu {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    padding: 3px 6px;
+
+    gap: 0;
+
+    background: var(--cinza);
+}
+
+
+.menu a {
+
+    padding: 2px 14px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    border-right: 1px solid #888;
+
+    font-size: 11px;
+}
+
+
+.menu a:hover {
+
+    color: white;
+
+    background: #4169a1;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        280px
+        1fr;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   PAINÉIS
+   ========================================================= */
+
+.painel {
+
+    margin-bottom: 12px;
+
+    background: var(--cinza);
+
+    border: 1px solid #555;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #777;
+}
+
+
+.painel-titulo {
+
+    padding: 4px 7px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #4169a1,
+            #7292b9
+        );
+
+    border-bottom: 1px solid #555;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.painel-conteudo {
+
+    padding: 9px;
+
+    line-height: 1.45;
+}
+
+
+.painel-conteudo p {
+
+    margin: 6px 0;
+}
+
+
+.painel a {
+
+    color: var(--link);
+
+    text-decoration: underline;
+}
+
+
+.painel a:hover {
+
+    color: #cc0000;
+}
+
+
+/* =========================================================
+   PERFIL
+   ========================================================= */
+
+.perfil {
+
+    display: grid;
+
+    grid-template-columns:
+        80px
+        1fr;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    align-items: center;
+}
+
+
+.cadeado {
+
+    width: 72px;
+    height: 72px;
+
+    padding: 4px;
+
+    background: #eee;
+
+    border:
+        1px solid #555;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #888;
+}
+
+
+.perfil strong {
+
+    font-size: 13px;
+
+    line-height: 1.2;
+}
+
+
+.online {
+
+    grid-column: 2;
+
+    width: max-content;
+
+    padding: 2px 5px;
+
+    color: #222;
+
+    background: #eee;
+
+    border:
+        1px solid #777;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #888;
+
+    font-size: 10px;
+}
+
+
+.online::first-letter {
+
+    color: green;
+}
+
+
+/* =========================================================
+   SYSTEM
+   ========================================================= */
+
+.sistema {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+}
+
+
+.sistema p {
+
+    padding: 4px;
+
+    margin: 2px 0;
+
+    background: #e7e5df;
+
+    border-bottom: 1px dotted #aaa;
+}
+
+
+.sistema b {
+
+    color: green;
+}
+
+
+/* =========================================================
+   JANELA PRINCIPAL
+   ========================================================= */
+
+.janela {
+
+    background: var(--cinza);
+
+    border: 2px solid;
+
+    border-color:
+        #ffffff
+        #555
+        #555
+        #ffffff;
+
+    box-shadow:
+        2px 2px 0 #222;
+}
+
+
+/* =========================================================
+   BARRA DA JANELA
+   ========================================================= */
+
+.janela-titulo {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3px 5px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #183c70,
+            #6c8cb7
+        );
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.janela-botoes {
+
+    display: flex;
+
+    gap: 2px;
+}
+
+
+.janela-botoes button {
+
+    width: 18px;
+    height: 16px;
+
+    padding: 0;
+
+    color: #222;
+
+    background: var(--cinza);
+
+    border: 1px solid;
+
+    border-color:
+        white
+        #555
+        #555
+        white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    line-height: 12px;
+}
+
+
+/* =========================================================
+   CONTEÚDO DA JANELA
+   ========================================================= */
+
+.janela-conteudo {
+
+    padding: 15px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+
+    margin-bottom: 14px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #aaa;
+}
+
+
+.intro h1 {
+
+    margin: 0 0 5px;
+
+    color: #222;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+.intro p {
+
+    margin: 0;
+
+    color: #444;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SUBTÍTULOS
+   ========================================================= */
+
+.subtitulo {
+
+    margin-bottom: 7px;
+
+    padding: 4px 6px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #4169a1,
+            #7895ba
+        );
+
+    border: 1px solid #555;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SENHA
+   ========================================================= */
+
+.caixa-senha {
+
+    margin-bottom: 14px;
+}
+
+
+.campo {
+
+    padding: 7px;
+
+    background: #eeeeee;
+
+    border: 2px solid;
+
+    border-color:
+        #777
+        white
+        white
+        #777;
+}
+
+
+#campo-senha {
+
+    width: 100%;
+
+    padding: 6px;
+
+    color: #111;
+
+    background: white;
+
+    border: 1px solid #777;
+
+    outline: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÕES
+   ========================================================= */
+
+.configuracoes {
+
+    margin-top: 10px;
+}
+
+
+.config-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 10px;
+}
+
+
+.config-box {
+
+    padding: 10px;
+
+    background: #e4e2dc;
+
+    border: 1px solid #777;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #aaa;
+}
+
+
+.config-box h3,
+.forca-box h3 {
+
+    margin: 0 0 10px;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border-bottom: 1px dotted #888;
+
+    padding-bottom: 5px;
+}
+
+
+/* =========================================================
+   CONTADOR
+   ========================================================= */
+
+.contador {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.parametro-senha__botao {
+
+    width: 34px;
+    height: 28px;
+
+    color: #222;
+
+    background: var(--cinza);
+
+    border: 2px solid;
+
+    border-color:
+        white
+        #555
+        #555
+        white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.parametro-senha__botao:hover {
+
+    background: #e9e9e9;
+}
+
+
+.parametro-senha__botao:active {
+
+    border-color:
+        #555
+        white
+        white
+        #555;
+}
+
+
+.parametro-senha__texto {
+
+    min-width: 45px;
+
+    margin: 0;
+
+    padding: 5px;
+
+    background: white;
+
+    border: 1px solid #777;
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CHECKBOXES
+   ========================================================= */
+
+.opcao {
+
+    display: block;
+
+    margin: 8px 0;
+
+    color: #222;
+
+    cursor: pointer;
+
+    line-height: 1.3;
+}
+
+
+.checkbox {
+
+    width: 13px;
+    height: 13px;
+
+    margin-right: 5px;
+
+    vertical-align: middle;
+
+    accent-color: #4169a1;
+}
+
+
+/* =========================================================
+   FORÇA
+   ========================================================= */
+
+.forca-box {
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #e4e2dc;
+
+    border: 1px solid #777;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #aaa;
+}
+
+
+.barra {
+
+    width: 100%;
+
+    height: 19px;
+
+    padding: 2px;
+
+    background: #333;
+
+    border: 1px solid #555;
+
+    box-shadow:
+        inset 1px 1px #222;
+}
+
+
+.forca {
+
+    height: 13px;
+
+    transition: width .15s linear;
+}
+
+
+.fraca {
+
+    width: 25%;
+
+    background: #b64242;
+}
+
+
+.media {
+
+    width: 50%;
+
+    background: #c8bd28;
+}
+
+
+.forte {
+
+    width: 100%;
+
+    background: #268b3d;
+}
+
+
+/* =========================================================
+   LEGENDA
+   ========================================================= */
+
+.legenda-forca {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 4px;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+.entropia {
+
+    margin: 8px 0 0;
+
+    padding: 6px;
+
+    color: #333;
+
+    background: #f0efeb;
+
+    border: 1px dotted #888;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   AVISO
+   ========================================================= */
+
+.aviso {
+
+    margin-top: 14px;
+}
+
+
+.aviso .painel-conteudo {
+
+    color: #333;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+footer {
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    text-shadow:
+        1px 1px #333;
+}
+
+
+footer p {
+
+    margin: 4px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px 5px;
+    }
+
+
+    .site {
+        width: 100%;
+    }
+
+
+    .layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .coluna-esquerda {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
+    }
+
+
+    .coluna-esquerda .painel {
+        margin-bottom: 0;
+    }
+
+
+    .coluna-esquerda .painel:first-child {
+        grid-column: 1 / -1;
+    }
+
+
+    .config-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .coluna-esquerda {
+
+        display: block;
+    }
+
+
+    .coluna-esquerda .painel {
+
+        margin-bottom: 10px;
+    }
+
+
+    .menu a {
+
+        padding: 3px 8px;
+    }
+
+
+    .janela-conteudo {
+
+        padding: 10px;
+    }
+
+
+    #campo-senha {
+
+        font-size: 16px;
+    }
+}

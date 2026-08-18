@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Generator // Space Edition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="site">
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topo">
+
+            <div class="topo-titulo">
+                🔐 Password Generator
+            </div>
+
+            <nav class="menu">
+
+                <a href="#">Home</a>
+                <a href="#">Tools</a>
+                <a href="#">About</a>
+                <a href="#">Links</a>
+
+            </nav>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="layout">
+
+
+            <!-- COLUNA ESQUERDA -->
+
+            <aside class="coluna-esquerda">
+
+
+                <section class="painel">
+
+                    <div class="painel-titulo">
+                        Password.exe
+                    </div>
+
+                    <div class="perfil">
+
+                        <img
+                            src="unlock.svg"
+                            alt="Cadeado"
+                            class="cadeado"
+                        >
+
+                        <strong>
+                            PASSWORD<br>
+                            GENERATOR
+                        </strong>
+
+                        <span class="online">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <section class="painel">
+
+                    <div class="painel-titulo">
+                        About
+                    </div>
+
+                    <div class="painel-conteudo">
+
+                        <p>
+                            Gere senhas aleatórias,
+                            personalize os caracteres
+                            e confira o nível de segurança.
+                        </p>
+
+                        <p>
+                            <a href="#">[ about this tool ]</a>
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section class="painel">
+
+                    <div class="painel-titulo">
+                        System
+                    </div>
+
+                    <div class="painel-conteudo sistema">
+
+                        <p>OS: Windows 98</p>
+                        <p>STATUS: <b>ONLINE</b></p>
+                        <p>VERSION: 1.0</p>
+                        <p>SECURITY: ACTIVE</p>
+
+                    </div>
+
+                </section>
+
+
+            </aside>
+
+
+            <!-- COLUNA PRINCIPAL -->
+
+            <section class="coluna-principal">
+
+
+                <!-- JANELA -->
+
+                <section class="janela">
+
+
+                    <div class="janela-titulo">
+
+                        <span>
+                            🔑 Password Generator
+                        </span>
+
+                        <div class="janela-botoes">
+
+                            <button>_</button>
+                            <button>□</button>
+                            <button>×</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="janela-conteudo">
+
+
+                        <div class="intro">
+
+                            <h1>
+                                Generate a password
+                            </h1>
+
+                            <p>
+                                Gere instantaneamente uma senha
+                                aleatória e segura.
+                            </p>
+
+                        </div>
+
+
+                        <!-- SENHA -->
+
+                        <div class="caixa-senha">
+
+                            <div class="subtitulo">
+                                Generated password
+                            </div>
+
+                            <div class="campo">
+
+                                <input
+                                    name="senha"
+                                    type="text"
+                                    id="campo-senha"
+                                    readonly
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONFIGURAÇÕES -->
+
+                        <div class="configuracoes">
+
+                            <div class="subtitulo">
+                                Customize your password
+                            </div>
+
+
+                            <div class="config-grid">
+
+
+                                <!-- TAMANHO -->
+
+                                <div class="config-box">
+
+                                    <h3>
+                                        Number of characters
+                                    </h3>
+
+                                    <div class="contador">
+
+                                        <button
+                                            class="parametro-senha__botao"
+                                            type="button"
+                                        >
+                                            -
+                                        </button>
+
+                                        <span
+                                            class="parametro-senha__texto"
+                                        >
+                                            12
+                                        </span>
+
+                                        <button
+                                            class="parametro-senha__botao"
+                                            type="button"
+                                        >
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CARACTERÍSTICAS -->
+
+                                <div class="config-box">
+
+                                    <h3>
+                                        Password characteristics
+                                    </h3>
+
+
+                                    <label class="opcao">
+
+                                        <input
+                                            name="maiusculo"
+                                            type="checkbox"
+                                            class="checkbox"
+                                            checked
+                                        >
+
+                                        Letras maiúsculas
+
+                                    </label>
+
+
+                                    <label class="opcao">
+
+                                        <input
+                                            name="minusculas"
+                                            type="checkbox"
+                                            class="checkbox"
+                                        >
+
+                                        Letras minúsculas
+
+                                    </label>
+
+
+                                    <label class="opcao">
+
+                                        <input
+                                            name="numeros"
+                                            type="checkbox"
+                                            class="checkbox"
+                                        >
+
+                                        Números
+
+                                    </label>
+
+
+                                    <label class="opcao">
+
+                                        <input
+                                            name="simbolos"
+                                            type="checkbox"
+                                            class="checkbox"
+                                        >
+
+                                        Símbolos
+
+                                    </label>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- FORÇA -->
+
+                            <div class="forca-box">
+
+                                <h3>
+                                    Password strength
+                                </h3>
+
+                                <div class="barra">
+
+                                    <div class="forca fraca"></div>
+
+                                </div>
+
+
+                                <div class="legenda-forca">
+
+                                    <span>Fraca</span>
+                                    <span>Média</span>
+                                    <span>Forte</span>
+
+                                </div>
+
+
+                                <p class="entropia"></p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- AVISO -->
+
+                <section class="painel aviso">
+
+                    <div class="painel-titulo">
+                        ★ Security notice
+                    </div>
+
+                    <div class="painel-conteudo">
+
+                        <p>
+                            Use senhas diferentes para cada serviço
+                            e evite compartilhar suas senhas.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+        </main>
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+
+            <p>
+                © 2026 Guilherme Luan de Almeida
+            </p>
+
+            <p>
+                best viewed with Internet Explorer 5.5+
+                · 1024x768
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
